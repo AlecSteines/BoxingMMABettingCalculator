@@ -100,12 +100,14 @@ namespace BettingCalculator
         public void Final()
         {
             Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine($"{OpponentOne.Name}");
             Console.WriteLine("-------------------------------------------------------------------------");
             Console.WriteLine($"Betting Odds: {OpponentOne.PlusMinus}{OpponentOne.Odds}");
             Console.WriteLine($"Possibility of Winning(Based on Odds): {OpponentOneBet.OddsCalculated}%");
             Console.WriteLine($"Bet Placed: {OpponentOneBet.Bet:C2}");
             Console.WriteLine($"Potential Winnings: {OpponentOneBet.Winnings:C2}");
+            Console.WriteLine();
             Console.WriteLine(" ------------------------------------------------------------------------");
             Console.WriteLine("| Keep in mind the winning odds of both fighters may add up to over 100% |");
             Console.WriteLine("|                     The odds are purposefully unfair                   |");
@@ -120,7 +122,8 @@ namespace BettingCalculator
             Console.WriteLine($"Potential Winnings: {OpponentTwoBet.Winnings:C2}");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("Press enter to close program");
+            Console.ReadLine();
         }
     }
 }

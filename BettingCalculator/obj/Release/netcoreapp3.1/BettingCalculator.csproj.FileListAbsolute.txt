@@ -1,0 +1,14 @@
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.exe
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.deps.json
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.runtimeconfig.json
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.runtimeconfig.dev.json
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.dll
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\bin\Release\netcoreapp3.1\BettingCalculator.pdb
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.csproj.AssemblyReference.cache
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.AssemblyInfoInputs.cache
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.AssemblyInfo.cs
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.dll
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.pdb
+C:\Users\Student\workspace\sideprojects\BettingCalculator\BoxingMMABettingCalculator\BettingCalculator\obj\Release\netcoreapp3.1\BettingCalculator.genruntimeconfig.cache

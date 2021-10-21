@@ -63,8 +63,6 @@ namespace BettingCalculator
                 return -1;
             }
             return oddInt;
-        }
-
-       
+        }        
     }
 }

@@ -10,10 +10,14 @@ namespace BettingCalculator
         public decimal Winnings { get; set; }
 
         public decimal Bet { get; set; }
-        public Calculator(decimal bet, decimal winnings)
+
+        public decimal OddsCalculated { get; set; }
+
+        public Calculator(decimal bet, decimal winnings, decimal oddsCalculated)
         {
             Bet = bet;
             Winnings = winnings;
+            OddsCalculated = oddsCalculated;
         }
 
         public decimal GetBet()
@@ -37,6 +41,22 @@ namespace BettingCalculator
                 return -1;
             }
             return betDecimal;
+        }
+
+        public decimal GetOddsPercentage(string plusMinus, int odds)
+        {
+            decimal finalOdds = 0;
+            finalOdds = odds / (odds + 100M);
+            if(plusMinus == "-")
+            {
+                finalOdds = Math.Round((finalOdds * 100), 2);
+                return finalOdds;
+            }
+            else
+            {
+                finalOdds = 100 - Math.Round((finalOdds * 100), 2);
+                return finalOdds;
+            }
         }
 
         public decimal GetPayOut(decimal bet, string favorite, int odds)

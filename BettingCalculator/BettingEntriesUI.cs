@@ -21,7 +21,6 @@ namespace BettingCalculator
             OpponentTwo = FighterTwo();
             OpponentTwoBet = OpponentTwoWinnings();
         }
-        
         public Fighter FighterOne()
         {
             Fighter opponentOne = new Fighter("null","null",0);
@@ -58,7 +57,6 @@ namespace BettingCalculator
             OpponentOneWins.OddsCalculated = OpponentOneWins.GetOddsPercentage(OpponentOne.PlusMinus, OpponentOne.Odds);
             return OpponentOneWins;
         }
-
         public Fighter FighterTwo()
         {
             Console.WriteLine("---------------------------------------------------------------------------------");
@@ -82,7 +80,6 @@ namespace BettingCalculator
             opponentTwo.Odds = odds;
             return opponentTwo;
         }
-
         public Calculator OpponentTwoWinnings()
         {
             Calculator OpponentTwoWins = new Calculator(0, 0, 0M);
@@ -96,7 +93,6 @@ namespace BettingCalculator
             OpponentTwoWins.OddsCalculated = OpponentTwoWins.GetOddsPercentage(OpponentTwo.PlusMinus, OpponentTwo.Odds);
             return OpponentTwoWins;
         }
-
         public void Final()
         {
             Console.WriteLine();
@@ -124,6 +120,7 @@ namespace BettingCalculator
             Console.WriteLine();
             Console.WriteLine("Press enter to close program");
             Console.ReadLine();
+             //Copyright [2021] [Alec Steines]
         }
     }
 }

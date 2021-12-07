@@ -1,3 +1,3 @@
 # BoxingMMABettingCalculator
 
-Basic CLI application that I made during the early stages of my tech elevator bootcamp. I would certainly do a lot of things differently now, to the point where I've been considering making it private until I have the chance to redo it, but it was a fun project.
+Basic CLI application that I made during the early stages of my tech elevator bootcamp. Recently touched up the program and redid quite a bit. It's a lot less of a mess now. It's simple and it works. 

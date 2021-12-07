@@ -17,12 +17,6 @@ namespace BettingCalculator
             Name = name;
             PlusMinus = plusMinus;
             Odds = odds;
-        }
-
-        
-
-        
-
-              
+        }         
     }
 }

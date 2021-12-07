@@ -7,7 +7,7 @@ namespace BettingCalculator
         public static void Main(string[] args)
         {
             BettingEntriesUI menu = new BettingEntriesUI();
-            menu.Final();
+            menu.run();
         }
     }
 }

@@ -7,41 +7,7 @@ namespace BettingCalculator
     public class Calculator
     {
 
-        public decimal Winnings { get; set; }
-
-        public decimal Bet { get; set; }
-
-        public decimal OddsCalculated { get; set; }
-
-        public Calculator(decimal bet, decimal winnings, decimal oddsCalculated)
-        {
-            Bet = bet;
-            Winnings = winnings;
-            OddsCalculated = oddsCalculated;
-        }
-
-        public decimal GetBet()
-        {
-            string bet;
-            decimal betDecimal;
-            Console.Write("How much would you like to bet on this fighter(USD): ");
-            bet = Console.ReadLine();
-            try
-            {
-                betDecimal = decimal.Parse(bet.Trim('$', ' '));
-            }
-            catch(Exception)
-            {
-                Console.WriteLine("That is not an acceptable bet, try again");
-                return -1;
-            }
-            if(betDecimal < 0)
-            {
-                Console.WriteLine("Bet must be at least 0(zero if you're not betting)");
-                return -1;
-            }
-            return betDecimal;
-        }
+        
 
         public decimal GetOddsPercentage(string plusMinus, int odds)
         {

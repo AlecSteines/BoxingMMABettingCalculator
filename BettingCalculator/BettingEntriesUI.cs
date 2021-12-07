@@ -6,107 +6,65 @@ namespace BettingCalculator
 {
     public class BettingEntriesUI
     {
-        private Fighter OpponentOne { get; set; }
+        public ConsoleHelpers consoleHelper = new ConsoleHelpers();
 
-        private Calculator OpponentOneBet { get; set; }
-
-        private Fighter OpponentTwo { get; set; }
-
-        private Calculator OpponentTwoBet { get; set; }
-
-        public BettingEntriesUI()
+        public Calculator calculator = new Calculator();
+        public void run()
         {
-            OpponentOne = FighterOne();
-            OpponentOneBet = OpponentOneWinnings();
-            OpponentTwo = FighterTwo();
-            OpponentTwoBet = OpponentTwoWinnings();
-        }
-        
-        public Fighter FighterOne()
-        {
-            Fighter opponentOne = new Fighter("null","null",0);
             string name;
             string favorite;
             int odds;
+            decimal bet;
             Console.WriteLine("Please enter the info for your first fighter");
             Console.WriteLine();
-            name = opponentOne.GetName();
+            name = consoleHelper.GetName();
             do
             {
-                favorite = opponentOne.GetFavorite();
+                favorite = consoleHelper.GetFavorite();
             } while (favorite == "X");
             do
             {
-                odds = opponentOne.GetOdds();
+                odds = consoleHelper.GetOdds();
             } while (odds == -1);
-            opponentOne.Name = name;
-            opponentOne.PlusMinus = favorite;
-            opponentOne.Odds = odds;
-
-            return opponentOne; 
-        }
-        public Calculator OpponentOneWinnings()
-        {
-            Calculator OpponentOneWins = new Calculator(0, 0, 0M);
-            decimal bet;
+            Fighter fighterOne = new Fighter(name, favorite, odds);
             do
             {
-                bet = OpponentOneWins.GetBet();
+                bet = consoleHelper.GetBet();
             } while (bet == -1);
-            OpponentOneWins.Bet = bet;
-            OpponentOneWins.Winnings = OpponentOneWins.GetPayOut(bet, OpponentOne.PlusMinus, OpponentOne.Odds);
-            OpponentOneWins.OddsCalculated = OpponentOneWins.GetOddsPercentage(OpponentOne.PlusMinus, OpponentOne.Odds);
-            return OpponentOneWins;
-        }
-
-        public Fighter FighterTwo()
-        {
-            Console.WriteLine("---------------------------------------------------------------------------------");
-            Fighter opponentTwo = new Fighter("null", "null", 0);
-            string name;
-            string favorite;
-            int odds;
+            //bet
+            decimal fighterOneBet = bet;
+            //opponentonewins.winnings
+            decimal fighterOnePayOut = calculator.GetPayOut(bet, fighterOne.PlusMinus, fighterOne.Odds);
+            //oddscalculated
+            decimal fighterOneCalculatedOdds = calculator.GetOddsPercentage(fighterOne.PlusMinus, fighterOne.Odds);
+            Console.Clear();
             Console.WriteLine("Please enter the info for your second fighter");
-            Console.WriteLine();
-            name = opponentTwo.GetName();
+            name = consoleHelper.GetName();
             do
             {
-                favorite = opponentTwo.GetFavorite();
+                favorite = consoleHelper.GetFavorite();
             } while (favorite == "X");
             do
             {
-                odds = opponentTwo.GetOdds();
+                odds = consoleHelper.GetOdds();
             } while (odds == -1);
-            opponentTwo.Name = name;
-            opponentTwo.PlusMinus = favorite;
-            opponentTwo.Odds = odds;
-            return opponentTwo;
-        }
-
-        public Calculator OpponentTwoWinnings()
-        {
-            Calculator OpponentTwoWins = new Calculator(0, 0, 0M);
-            decimal bet;
+            Fighter fighterTwo = new Fighter(name, favorite, odds);
             do
             {
-                bet = OpponentTwoWins.GetBet();
+                bet = consoleHelper.GetBet();
             } while (bet == -1);
-            OpponentTwoWins.Bet = bet;
-            OpponentTwoWins.Winnings = OpponentTwoWins.GetPayOut(bet, OpponentTwo.PlusMinus, OpponentTwo.Odds);
-            OpponentTwoWins.OddsCalculated = OpponentTwoWins.GetOddsPercentage(OpponentTwo.PlusMinus, OpponentTwo.Odds);
-            return OpponentTwoWins;
-        }
-
-        public void Final()
-        {
+            decimal fighterTwoBet = bet;
+            decimal fighterTwoPayOut = calculator.GetPayOut(bet, fighterTwo.PlusMinus, fighterTwo.Odds);
+            decimal fighterTwoCalculatedOdds = calculator.GetOddsPercentage(fighterTwo.PlusMinus, fighterTwo.Odds);
+       
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"{OpponentOne.Name}");
+            Console.WriteLine($"{fighterOne.Name}");
             Console.WriteLine("-------------------------------------------------------------------------");
-            Console.WriteLine($"Betting Odds: {OpponentOne.PlusMinus}{OpponentOne.Odds}");
-            Console.WriteLine($"Possibility of Winning(Based on Odds): {OpponentOneBet.OddsCalculated}%");
-            Console.WriteLine($"Bet Placed: {OpponentOneBet.Bet:C2}");
-            Console.WriteLine($"Potential Winnings: {OpponentOneBet.Winnings:C2}");
+            Console.WriteLine($"Betting Odds: {fighterOne.PlusMinus}{fighterOne.Odds}");
+            Console.WriteLine($"Possibility of Winning(Based on Odds): {fighterOneCalculatedOdds}%");
+            Console.WriteLine($"Bet Placed: {fighterOneBet:C2}");
+            Console.WriteLine($"Potential Winnings: {fighterOnePayOut:C2}");
             Console.WriteLine();
             Console.WriteLine(" ------------------------------------------------------------------------");
             Console.WriteLine("| Keep in mind the winning odds of both fighters may add up to over 100% |");
@@ -114,12 +72,12 @@ namespace BettingCalculator
             Console.WriteLine("|                          The House Always Wins                         |");
             Console.WriteLine(" ------------------------------------------------------------------------");
             Console.WriteLine();
-            Console.WriteLine($"{OpponentTwo.Name}");
+            Console.WriteLine($"{fighterTwo.Name}");
             Console.WriteLine("-------------------------------------------------------------------------");
-            Console.WriteLine($"Betting Odds: {OpponentTwo.PlusMinus}{OpponentTwo.Odds}");
-            Console.WriteLine($"Possibility of Winning(Based on Odds): {OpponentTwoBet.OddsCalculated}%");
-            Console.WriteLine($"Bet Placed: {OpponentTwoBet.Bet:C2}");
-            Console.WriteLine($"Potential Winnings: {OpponentTwoBet.Winnings:C2}");
+            Console.WriteLine($"Betting Odds: {fighterTwo.PlusMinus}{fighterTwo.Odds}");
+            Console.WriteLine($"Possibility of Winning(Based on Odds): {fighterTwoCalculatedOdds}%");
+            Console.WriteLine($"Bet Placed: {fighterTwoBet:C2}");
+            Console.WriteLine($"Potential Winnings: {fighterTwoPayOut:C2}");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Press enter to close program");
